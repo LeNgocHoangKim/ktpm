@@ -60,8 +60,8 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
         # tạo user mặc định nếu chưa có
-        if not User.query.filter_by(name='admin').first():
-            admin_user = User(name='admin', password='admin', email='admin@example.com')
+        if not User.query.filter_by(name='kim').first():
+            admin_user = User(name='kim', password='123', email='admin@example.com')
             db.session.add(admin_user)
             db.session.commit()
     app.run(debug=True)
